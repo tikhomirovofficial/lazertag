@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Лазертаг в Череповце по доступной цене | «Адреналин»</title>
+  <meta name="description" content="Лазертаг по доступной цене в Череповце. Бесплатная игра для именинника, сертифицированные и оборудованные площадки. Записаться по телефону ☎+7 (921) 723-13-16" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+</head>
+
+<body class="platform1">
+  <div class="overlay" id="overlay"></div>
+  <div class="popup main-modal lasertag" id="main-modal">
+    <div class="popup__close popup-close"></div>
+    <div class="main-modal__inner">
+      <div class="main-modal__title title3"><span class="yellow">Оставьте заявку</span><br>
+        и&nbsp;мы&nbsp;вам перезвоним</div>
+      <form class="send-form-mess" action="mailer.php" method="POST">
+        <div class="mainform__row">
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="name5" name="Имя пользователя:">
+            <label class="mainform__label" for="name5">Имя</label>
+          </div>
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="phone5" name="Телефон пользователя:">
+            <label class="mainform__label" for="phone5">Телефон</label>
+          </div>
+          <div class="quiz-row">
+          <div class="quiz-row__info tabs-quiz">
+            <div class="quiz__radio tabs-quiz__item current" data-tab="qi1">
+              <input id="lasertag1" name="Тип мероприятия:" type="radio" value="Лазертаг в помещении">
+              <label for="lasertag1">Лазертаг в помещении</label>
+            </div>
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi2">
+              <input id="lasertag2" name="Тип мероприятия:" type="radio" value="Лазертаг на улице">
+              <label for="lasertag2">Лазертаг на улице</label>
+            </div>
+          </div>
+        </div>
+          <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по
+              использованию сайта </a> и&nbsp;согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+          <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="calc-btn blick-btn popup-btn quiz-play met-btn" data-m-target="Jarlik-sprava" data-popup="quiz">
+    <img src="img/calc-btn.png" alt="" class="calc-btn__img">
+    <span>
+      Рассчитать
+      стоимость
+    </span>
+    <div class="blick-btn__before"></div>
+    <div class="blick-btn__after"></div>
+  </div>
+  
+  <div class="quiz popup" id="quiz">
+    <div class="quiz__cost">
+      <div class="quiz__cost-text">Ваша скидка</div>
+      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
+          value="200" readonly>₽</div>
+    </div>
+    <div class="quiz__close popup__close popup-close"></div>
+    <form class="quiz__content form-send" method="post" action="mailer.php" id="quizForm">
+      <div class="quiz-item current" data-quiz="1">
+        <input type="radio" checked class="dis-none">
+        <div class="quiz__title">
+          Ответьте на 6 вопросов
+          и получите скидку на игру,
+          а&nbsp;также индивидуальный расчёт стоимости игры.
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="2">
+        <div class="quiz__title">
+          Какой у вас повод для игры?
+        </div>
+        <div class="quiz-row">
+          <div class="quiz-row__info tabs-quiz">
+            <div class="quiz__radio tabs-quiz__item current" data-tab="qi1">
+              <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
+              <label for="reason1">День рождения</label>
+            </div>
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi2">
+              <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
+              <label for="reason2">Игра класса/выпускной</label>
+            </div>
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi3">
+              <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
+              <label for="reason3">Сборная игра</label>
+            </div>
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi4">
+              <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
+              <label for="reason4">Корпоратив</label>
+            </div>
+          </div>
+          <div class="quiz-tabs">
+            <div class="quiz-row__img tabs-inner__item current ibg" id="qi1"
+              style="background-image: url(img/birthday/hero.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi2"
+              style="background-image: url(img/game/hero-bg2.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi3"
+              style="background-image: url(img/quest/quest-bg.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi4" style="background-image: url(img/company/hero.jpg);">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="3">
+        <div class="quiz__title">
+          Сколько человек планируется?
+        </div>
+        <div class="quiz-row1">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="howmuch1" name="Сколько человек?" type="radio" value="1">
+              <label for="howmuch1">1</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch2" name="Сколько человек?" type="radio" value="до 6">
+              <label for="howmuch2">до 6</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch3" name="Сколько человек?" type="radio" value="6-10">
+              <label for="howmuch3">6-10</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch4" name="Сколько человек?" type="radio" value="10-15">
+              <label for="howmuch4">10-15</label>
+            </div>
+            <div class="quiz__radio any">
+  
+              <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
+              <label for="change_input">
+                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="4">
+        <div class="quiz__title">
+          Средний возраст участников?
+        </div>
+        <div class="quiz-row1 quiz-age">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="age1" name="Средний возраст участников:" type="radio" value="до 6 лет">
+              <label for="age1">до 6 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age2" name="Средний возраст участников:" type="radio" value="9-11 лет">
+              <label for="age2">9-11 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age3" name="Средний возраст участников:" type="radio" value="15-18 лет">
+              <label for="age3">15-18 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age4" name="Средний возраст участников:" type="radio" value="6 -8 лет">
+              <label for="age4">6 -8 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age5" name="Средний возраст участников:" type="radio" value="12-14 лет">
+              <label for="age5">12-14 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age6" name="Средний возраст участников:" type="radio" value="18+ лет">
+              <label for="age6">18+ лет</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="5">
+        <div class="quiz__title">
+          Какую площадку выберете?
+        </div>
+        <div class="quiz-row2 quiz-platform">
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform1" value="Лесная площадка">
+            <label for="platform1">
+              <img src="img/quiz/1.png" alt="">
+              <span>Лесная площадка</span>
+            </label>
+          </div>
+          <!-- <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform2" value="Гоголя, 56 (за ТЦ «Рассвет»)">
+            <label for="platform2">
+              <img src="img/quiz/2.png" alt="">
+              <span>Гоголя, 56 (за ТЦ «Рассвет»)</span>
+            </label>
+          </div> -->
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="6">
+        <div class="quiz__title">
+          Напишите дату и время игры
+        </div>
+        <div class="quiz-row3 quiz-time">
+          <div class="quiz__radio any">
+            <input id="data-time" type="radio">
+            <label for="change_input2">
+              <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
+                placeholder="Желаемые дата и время игры">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="7">
+        <div class="quiz__title">
+          Что может понадобиться?
+        </div>
+        <input type="radio" checked class="dis-none">
+        <div class="quiz-end__row">
+          <div class="quiz__end-check">
+            <input id="check1" name="Гидробол" type="checkbox" value="Есть">
+            <label for="check1">Гидробол</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check2" name="Полоса препятствий" type="checkbox" value="Есть">
+            <label for="check2">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check3" name="Ведущая" type="checkbox" value="Есть">
+            <label for="check3">Ведущая</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check4" name="Пиньята" type="checkbox" value="Есть">
+            <label for="check4">Пиньята</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check5" name="Сертификат участника" type="checkbox" value="Есть">
+            <label for="check5">Сертификат участника</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check6" name="Музыка" type="checkbox" value="Есть">
+            <label for="check6">Музыка</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check7" name="Грим" type="checkbox" value="Есть">
+            <label for="check7">Грим</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check8" name="Комната отдыха" type="checkbox" value="Есть">
+            <label for="check8">Комната отдыха</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check9" name="Фрироуп" type="checkbox" value="Есть">
+            <label for="check9">Фрироуп</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check10" name="Тир" type="checkbox" value="Есть">
+            <label for="check10">Тир</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check11" name="Пригласительные" type="checkbox" value="Есть">
+            <label for="check11">Пригласительные</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check12" name="Тимбилдинг" type="checkbox" value="Есть">
+            <label for="check12">Тимбилдинг</label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="8">
+        <div class="quiz__title">
+          Оставьте контакты и получите
+          расчёт стоимости и скидку
+          на&nbsp;игру
+        </div>
+        <div class="quiz-row4 quiz-contact">
+          <div class="quiz__radio any any2">
+            <input id="quizName" name="Имя пользователя:" class="quiz-form-text" type="text" required>
+            <label for="quizName">Имя</label>
+          </div>
+          <div class="quiz__radio any any2">
+            <input id="quizPhone" name="Телефон:" class="quiz-form-text" type="text" required>
+            <label for="quizPhone">Телефон</label>
+          </div>
+        </div>
+        <button type="submit" class="btn quiz-btn-send btn-12"><span>Далее</span></button>
+      </div>
+    </form>
+    <!-- /.quiz__content -->
+    <div class="quiz__info">
+      <div class="quiz__info-content">
+        <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
+        <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
+            class="quiz__info-end"></span></div>
+        <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
+      </div>
+      <div class="quiz__line">
+        <div class="quiz__line-complete"></div>
+      </div>
+    </div>
+    <!-- /.quiz__info -->
+  </div>
+  <!-- /.quiz -->
+
+  <!-- <Шапка сайта> -->
+    <div class="mainblock-wrapper ibg" style="background-image: url(img/main/bg.jpg);">
+    <!-- <Шапка сайта> -->
+    <header class="header fixed white">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/" class="header__logo">
+            <img src="img/header/logo.png" alt="">
+          </a>
+          <div class="header-menu">
+            <div class="header-menu__close popup-close">
+    
+            </div>
+            <ul class="header__menu">
+              <li class="header__list">
+                Услуги
+                <ul class="header__submenu">
+                  <li><a href="birthday.html">День рождения</a></li>
+                  <li><a href="lasertag.html">Лазертаг</a></li>
+                  <li><a href="game.html">Игра классов</a></li>
+                  <li><a href="company.html">Корпоратив</a></li>
+                  <li><a href="release.html">Выпускной</a></li>
+                  <li><a href="quest.html">Квесты</a></li>
+                </ul>
+              </li>
+              <li class="header__list">
+                Площадки для игр
+                <ul class="header__submenu">
+                  <li><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+                  <li><a href="platform3.html">г. Череповец, Бункер</a></li>
+                  <!-- <li><a href="platform2.html">г. Череповец, ул. Гоголя</a></li> -->
+                </ul>
+              </li>
+              <li class="header__cost"><a href="#">Стоимость</a></li>
+            </ul>
+          </div>
+          <div class="header__col">
+            <div class="header__phone">
+              <a href="tel:+541316">54-13-16</a>
+              <a href="tel:+79217231316">+7 (921) 723-13-16</a>
+            </div>
+            <button class="header__btn btn btn-11 popup-btn met-btn" data-m-target="Zakaz_zvonka_shapka" data-popup="main-modal"><span>Заказать звонок</span></button>
+          </div>
+          <div class="header-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- /.header__inner -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- </Шапка сайта> -->
+
+    <!-- <ГЛАВНЫЙ БЛОК> -->
+    <section class="mainblock">
+      <div class="container">
+        <div class="mainblock__inner">
+          <h1 class="mainblock__title title">Лазертаг в Череповце</h1>
+          <ul class="mainblock__list">
+            <li class="mainblock__list-item">
+              <img src="img/main/1.svg" alt="">
+              <span>Самая низкая цена в городе</span>
+            </li>
+            <li class="mainblock__list-item">
+              <img src="img/main/2.png" alt="">
+              <span>Игра на безопасных и полностью оборудованных площадках</span>
+            </li>
+            <li class="mainblock__list-item">
+              <img src="img/main/3.svg" alt="">
+              <span>Бесплатная игра для именинника</span>
+            </li>
+          </ul>
+          <div class="mainblock__row">
+            <!-- <form action="" method="get" onsubmit="ym(57870985, 'reachGoal', 'Glavnaya_raschet'); return true;"> -->
+              <button class="mainblock__btn btn popup-btn quiz-play blick-btn met-btn" data-m-target="dr_sertifikat"
+            data-popup="main-modal"><span>Оставить заявку</span></button>
+              
+            <!-- </form> -->
+            <!-- <div class="video">
+              <div class="video__click">
+                <div class="video__click-body"></div>
+                <img src="img/icons/play.svg" alt="" class="video__click-play">
+              </div>
+              <button class="video__btn">Смотреть видео</button>
+            </div> -->
+          </div>
+          <!-- /.mainblock__row -->
+        </div>
+        <!-- /.mainblock__inner -->
+      </div>
+     
+    </section>
+    <!-- </ГЛАВНЫЙ БЛОК> -->
+  </div>
+  <!-- </Шапка сайта> -->
+
+  <!-- <ЛАЗЕРТАГ> -->
+  <section class="blockinfo sect">
+    <div class="container">
+      <div class="blockinfo__inner">
+        <div class="blockinfo__info">
+          <h2 class="blockinfo__title title">Об игре</h2>
+          <p class="blockinfo__text">Лазербол или лазертаг – это развлечение нового поколения, дающее мощный выброс адреналина и позитивные эмоции. Игра погружает детей и взрослых в фантастический мир, но с полным сохранением ощущения реальности.</p>
+          <p class="blockinfo__text">Лазертаг зародился в США и использовался как тренажер для тактической подготовки на военных базах. Довольно быстро он перешел в категорию досуга и покорил все страны мира. О сути игры точно говорит ее название на английском языке – lasertag. Переводится оно как «лазерная метка».</p>
+          <p class="blockinfo__text">В общих чертах эффектное развлечение напоминает пейнтбол: игроки разбиваются на команды и стреляют друг в друга. Но на этом сходство заканчивается. Лазертаг, несмотря на азарт и выброс адреналина, предполагает бесконтактный бой. Участники «выстреливают» из бластера лазером, то есть лучом света. Факт попадания считывают специальные датчики. Поэтому лазертаг абсолютно безопасен для детей и часто выбирается как вариант для празднования дня рождения. Игра очень зрелищная – все вокруг сверкает и вспыхивает огнями, завораживая команды вне зависимости от возраста.</p>
+        </div>
+        <!-- /.blockinfo__info -->
+        <div class="blockinfo__video blockinfo__info-2 ibg" style="background-image: url(img/servicesadd/9.jpg);">
+        </div>
+        <!-- /.blockinfo__video -->
+      </div>
+      <!-- /.blockinfo__inner -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ЛАЗЕРТАГ> -->
+
+  <!-- <ЛАЗЕРТАГ> -->
+  <section class="blockinfo sect">
+    <div class="container">
+      <div class="blockinfo__inner">
+        <div class="blockinfo__info">
+<h2 class="blockinfo__title title">Подготовка, экипировка</h2>
+<p class="blockinfo__text">Лазертаг-клубы обеспечивают игроков не только площадками для боя, но и всей необходимой экипировкой. Она состоит из бластера, повязки на голову и жилета. Последние предметы имеют интегрированные датчики, которые фиксируют попадание и оповещают участника боя об этом звуковым сигналом или вибрацией. Одежду для сражения лучше подбирать удобную и не стесняющую движений.</p>
+<p class="blockinfo__text">В лазертаг играют на специально обустроенных аренах и на улице. В первом случае бой будет интереснее, так как площадка наполнена препятствиями и стилизована под фантастический мир. Иногда, для зрелищности на арену запускается дым и используются спецэффекты разного уровня.</p>
+<p class="blockinfo__text">Перед началом сражения соперников знакомят с экипировкой и техникой безопасности. Игра запускается по одному из нескольких сценариев – выбить всех противников, взять базу другой команды и т.д. «Убитым» игрок считается после первого попадания, выбывая с арены, или после нейтрализации всех жизней (их количество определено сценарием).</p>
+         
+        </div>
+        <!-- /.blockinfo__info -->
+        <div class="blockinfo__video blockinfo__info-2 ibg" style="background-image: url(img/services/2.jpg);">
+        </div>
+        <!-- /.blockinfo__video -->
+      </div>
+      <!-- /.blockinfo__inner -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ЛАЗЕРТАГ> -->
+
+  <!-- <ЛАЗЕРТАГ> -->
+  <section class="blockinfo sect">
+    <div class="container">
+      <div class="blockinfo__inner">
+        <div class="blockinfo__info">
+
+<h2 class="blockinfo__title title">Лазертаг для детей</h2>
+<p class="blockinfo__text">Лазертаг лучше всего организовывать для детей от 7 лет. Но и дети младшего возраста могут испытать себя в игре. Даже при проигрыше они точно останутся в восторге от снаряжения и и атмосферы.</p>
+<p class="blockinfo__text">Лазертаг в Череповце может стать самым запоминающимся и ярким событием в жизни ребенка! А повод для проведения игры всегда найдется!
+Близится день рождения? Лазерный бой для именинника и его гостей станет лучшим подарком, о котором дети еще долго будут вспоминать с горящими глазами.</p>
+<p class="blockinfo__text">Хочется сплотить класс, сдружив одноклассников? Нет ничего лучше, чем игра на светящейся арене. А чтобы дети не рассорились между собой, команды можно несколько раз миксовать.
+Требуется необычный вариант для школьного выпускного из начальной, средней или старшей школы? Лазертаг с захватом базы противника или по любому другому сценарию будет фееричным финалом праздника либо одним из его элементов.
+Какая бы причина ни привела Вас в лазертаг-клуб, Вы обязательно захотите еще раз пережить эти эмоции!</p>
+
+
+          <button class="blockinfo__btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать
+              игру</span></button>
+        </div>
+        <!-- /.blockinfo__info -->
+        <div class="blockinfo__video blockinfo__info-2 ibg" style="background-image: url(img/lazertag-video.jpg);">
+        </div>
+        <!-- /.blockinfo__video -->
+      </div>
+      <!-- /.blockinfo__inner -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ЛАЗЕРТАГ> -->
+
+  <!-- <ФОТО> -->
+  <section class="photo sect">
+    <div class="container">
+      <h2 class="photo__titile title">Смотрите фотографии</h2>
+    </div>
+    <!-- /.container -->
+    <div class="container-big">
+      <div class="photo__slider slider-main">
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/0f_mqby-GpM.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/8PQhlOpV0nI.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/fcYQYdxG9wI.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/LqFUjNx6mP8.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/m74fnZuoC90.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/R8gV2eGawXQ.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/lazertag/WFSI7O9Wc-4.jpg);"></div>
+      </div>
+      <!-- /.photo__slider -->
+    </div>
+  </section>
+  <!-- </ФОТО> -->
+
+  <!-- <СТОИМОСТЬ> -->
+  <section class="cost sect" id="cost-point">
+    <div class="container">
+      <h2 class="cost__title title title_r">Стоимость</h2>
+      <div class="cost__list">
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost" data-popup="main-modal">
+          <div class="cost__item-title">Именинник</div>
+          <div class="cost__item-img anim" id="anim3" data-anims="2">
+            <!-- <img src="img/cost/1.svg" alt=""> -->
+          </div>
+          <h3 class="cost__item-heading">0 рублей</h3>
+          <p class="cost__item-text">
+            Для именинника за неделю<br>
+            до и после <span>дня рождения</span>
+          </p>
+          <div class="cost__item-btn">Поиграть бесплатно →</div>
+        </div>
+        <!-- /.cost__item -->
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Лазертаг</div>
+          <div class="cost__item-img anim" id="anim1" data-anims="0">
+            <!-- <img src="img/cost/2.svg" alt=""> -->
+          </div>
+          <h3 class="cost__item-heading">от 500 ₽/час</h3>
+          <p class="cost__item-text">
+            С человека при заказе<br>
+            игры в <span>лазертаг</span>
+          </p>
+          <div class="cost__item-btn">Рассчитать стоимость →</div>
+        </div>
+        <!-- /.cost__item -->
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Пейнтбол</div>
+          <div class="cost__item-img anim" id="anim2" data-anims="1">
+            <!-- <img src="img/cost/3.svg" alt=""> -->
+          </div>
+          <h3 class="cost__item-heading">от 700 ₽/час</h3>
+          <p class="cost__item-text">
+            С человека при заказе<br>
+            игры в <span>пейнтбол</span>
+          </p>
+          <div class="cost__item-btn">Рассчитать стоимость →</div>
+        </div>
+        <!-- /.cost__item -->
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Квест</div>
+          <div class="cost__item-img anim" id="anim4" data-anims="3">
+            <!-- <img src="img/cost/4.svg" alt=""> -->
+          </div>
+          <h3 class="cost__item-heading">от 500 ₽</h3>
+          <p class="cost__item-text">
+            С человека при заказе<br>
+            <span>квеста</span>
+          </p>
+          <div class="cost__item-btn">Рассчитать стоимость →</div>
+        </div>
+        <!-- /.cost__item -->
+      </div>
+      <!-- /.cost__list -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </СТОИМОСТЬ> -->
+
+    <!-- <ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ> -->
+  <div class="services-add sect">
+    <div class="container">
+      <h2 class="services-add__title title">Доп. услуги</h2>
+      <div class="services-add__row row row-top">
+        <div class="row__left">
+          <div class="column-big ibg" style="background-image: url(img/servicesadd/1.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Скидка 25% на заказ в Додо-пицца и Гороныч</h4>
+              <p class="services-add__item-text">У нас вы можете заказать еду и напитки в Додо-пицца
+                или Горыныч со скидкой в 25%.</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-big -->
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/2.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Еда</h4>
+              <p class="services-add__item-text">Вы можете принести угощения с&nbsp;собой или доверить это нам</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/3.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Фотосъемка</h4>
+              <p class="services-add__item-text">На каждой игре проводится бесплатная фотосъёмка</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+        </div>
+        <!-- /.row__left -->
+        <div class="row__right">
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/4.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Беседка</h4>
+              <p class="services-add__item-text">На полигоне есть беседка, где
+                можно отдохнуть, пообщаться и&nbsp;поесть шашлыки</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/5.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Подарочный сертификат</h4>
+              <p class="services-add__item-text">У нас вы можете приобрести
+                подарочные сертификаты на любую сумму</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+          <div class="column-big ibg" style="background-image: url(img/servicesadd/6.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Комната отдыха</h4>
+              <p class="services-add__item-text">У нас есть специально оборудованные комнаты отдыха, где после войны можно отдохнуть, перевести дух и продолжить отмечать праздник со своими товарищами по оружию</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-big -->
+        </div>
+        <!-- /.row__right -->
+      </div>
+      <!-- /.services-add__row -->
+      <div class="services-add__row row">
+        <div class="row__left">
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/7.jpg); width: 100%">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Грим</h4>
+              <p class="services-add__item-text">Мы можем сделать
+                для вас специальную боевую раскраску</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+          <!--            <div class="column-little ibg" style="background-image: url(img/servicesadd/8.jpg);">-->
+          <!--              <div class="services-add__item">-->
+          <!--                <h4 class="services-add__item-title">Гидробол</h4>-->
+          <!--                <p class="services-add__item-text">Это активная командная игра, в которой для поражения противника используется оружие, заряженное шариками из гидрогеля.</p>-->
+          <!--              </div>-->
+          <!--              &lt;!&ndash; /.services-add__item &ndash;&gt;-->
+          <!--            </div>-->
+          <!-- /.column-little -->
+          <div class="column-big ibg" style="background-image: url(img/servicesadd/9.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Лазертаг и пейнтбол тиры</h4>
+              <p class="services-add__item-text">Устанавливаем специальные тиры для стрельбы по ним
+                из оружия, предназначенного для лазертага или пейнтбола</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-big -->
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/10.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Полоса препятствий</h4>
+              <p class="services-add__item-text">Полоса местности, оборудованная различными препятствиями и инженерными сооружениями.</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+          <div class="column-little ibg" style="background-image: url(img/servicesadd/11.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Сертификат участника</h4>
+              <p class="services-add__item-text">У нас вы можете приобрести
+                сертификаты участника для&nbsp;всех ваших гостей</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-little -->
+        </div>
+        <!-- /.row__left -->
+        <div class="row__right">
+          <div class="column-middle ibg" style="background-image: url(img/servicesadd/12.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Пиротехника</h4>
+              <p class="services-add__item-text">У&nbsp;нас вы можете приобрести
+                гранаты&nbsp;и&nbsp;дымы, которые
+                прошли&nbsp;обязательную
+                сертификацию</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-middle -->
+          <div class="column-middle ibg" style="background-image: url(img/servicesadd/13.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Фрироуп</h4>
+              <p class="services-add__item-text">Это преодоление дистанций, созданных на деревьях или искусственных опорах</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-middle -->
+          <div class="column-middle ibg" style="background-image: url(img/servicesadd/14.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Пиньята</h4>
+              <p class="services-add__item-text">Это фигура наполненная внутри конфетами, которую именинник разбивает битой после игры.</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-middle -->
+          <div class="column-middle ibg" style="background-image: url(img/servicesadd/15.jpg);">
+            <div class="services-add__item">
+              <h4 class="services-add__item-title">Пригласительный
+                на&nbsp;день&nbsp;рождения</h4>
+              <p class="services-add__item-text">У&nbsp;нас вы можете приобрести
+                пригласительные для&nbsp;всех
+                ваших&nbsp;гостей</p>
+            </div>
+            <!-- /.services-add__item -->
+          </div>
+          <!-- /.column-middle -->
+        </div>
+        <!-- /.row__right -->
+      </div>
+      <!-- /.services-add__row -->
+      <a href="#" class="btn-more slider-game__btn">Ещё услуги</a>
+    </div>
+    <!-- /.container -->
+  </div>
+    <!-- </ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ> -->
+
+  <!-- <ФОРМА ОБРАТНОЙ СВЯЗИ> -->
+  <section class="mainform sect">
+    <div class="container">
+      <div class="mainform__inner">
+        <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите&nbsp;заказать&nbsp;игру?
+          Оставьте заявку и мы вам перезвоним.</h2>
+        <form action="mailer.php" method="POST" class="send-form-mess2">
+          <div class="mainform__row">
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="name" name="Имя пользователя:">
+              <label class="mainform__label" for="name">Имя</label>
+            </div>
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="phone" name="Телефон пользователя:">
+              <label class="mainform__label" for="phone">Телефон</label>
+            </div>
+            <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+          </div>
+        </form>
+        <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по
+            использованию сайта </a> и
+          согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+      </div>
+      <!-- /.mainform__inner -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ФОРМА ОБРАТНОЙ СВЯЗИ> -->
+
+  <!-- <ПОДВАЛ САЙТА> -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__column">
+          <h5 class="footer__title">Наши услуги</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="birthday.html">День рождения</a></li>
+            <li class="footer__list-item"><a href="game.html">Игра классов</a></li>
+            <li class="footer__list-item"><a href="company.html">Корпоратив</a></li>
+            <li class="footer__list-item"><a href="release.html">Выпускной</a></li>
+            <li class="footer__list-item"><a href="quest.html">Квесты</a></li>
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+        <div class="footer__column">
+          <h5 class="footer__title">Площадки для игр</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="platform1.html">г. Череповец, Лесная площадка</a></li>
+            <!-- <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя</a></li> -->
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+        <div class="footer__column">
+          <h5 class="footer__title">Контакты</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="tel:+541316">54-13-16</a></li>
+            <li class="footer__list-item"><a href="tel:+79217231316">+7 (921) 723-13-16</a></li>
+            <li class="footer__list-item"><a href="mailto:info@adrenalin35.ru">info@adrenalin35.ru</a></li>
+          </ul>
+          <div class="footer__list-social">
+            <a href="https://vk.com/adrenalinpaintball"  rel="nofollow" target="_blank"><span class="footer__list-social-img ibg"></span></a>
+            <a href="https://www.instagram.com/_adrenalin35_/"  rel="nofollow" target="_blank"><span class="footer__list-social-img ibg"></span></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h5 class="footer__title">Документы</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="protect.html">Конфиденциальность и защита</a></li>
+            <li class="footer__list-item"><a href="confidentiality.html">Договор-оферта</a></li>
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+      </div>
+      <!-- /.footer__inner -->
+      <div class="footer__info">
+        <p class="footer__copy">Copyright © 2020 Adrenalin. All rights reserved</p>
+        <a href="https://vk.com/vpodosenov"  rel="nofollow" target="_blank" class="development-link"><span>Разработка сайта под ключ <br>Вячеслав Подосёнов</span></a>
+      </div>
+      <!-- /.footer__info -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- </ПОДВАЛ САЙТА> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main-min.js"></script>
+  
+    <!-- Yandex.Metrika counter -->
+  
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+  
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+          a)
+      })
+  
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+      ym(57870985, "init", {
+  
+        clickmap: true,
+  
+        trackLinks: true,
+  
+        accurateTrackBounce: true,
+  
+        webvisor: true
+  
+      });
+    </script>
+  
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/57870985" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+  
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
