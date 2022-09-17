@@ -45,12 +45,13 @@
     <div class="blick-btn__before"></div>
     <div class="blick-btn__after"></div>
   </div>
-  
+
   <div class="quiz popup" id="quiz">
     <div class="quiz__cost">
       <div class="quiz__cost-text">Ваша скидка</div>
       <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
-          value="200" readonly>₽</div>
+                                            value="200" readonly>₽
+      </div>
     </div>
     <div class="quiz__close popup__close popup-close"></div>
     <form class="quiz__content form-send" method="post" action="mailer.php" id="quizForm">
@@ -87,12 +88,13 @@
           </div>
           <div class="quiz-tabs">
             <div class="quiz-row__img tabs-inner__item current ibg" id="qi1"
-              style="background-image: url(img/birthday/hero.jpg);"></div>
+                 style="background-image: url(img/birthday/hero.jpg);"></div>
             <div class="quiz-row__img tabs-inner__item ibg" id="qi2"
-              style="background-image: url(img/game/hero-bg2.jpg);"></div>
+                 style="background-image: url(img/game/hero-bg2.jpg);"></div>
             <div class="quiz-row__img tabs-inner__item ibg" id="qi3"
-              style="background-image: url(img/quest/quest-bg.jpg);"></div>
-            <div class="quiz-row__img tabs-inner__item ibg" id="qi4" style="background-image: url(img/company/hero.jpg);">
+                 style="background-image: url(img/quest/quest-bg.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi4"
+                 style="background-image: url(img/company/hero.jpg);">
             </div>
           </div>
         </div>
@@ -120,10 +122,11 @@
               <label for="howmuch4">10-15</label>
             </div>
             <div class="quiz__radio any">
-  
+
               <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
               <label for="change_input">
-                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
+                <input class="quiz-form-text" id="change_input" name="none" type="text"
+                       placeholder="Другое">
               </label>
             </div>
           </div>
@@ -168,10 +171,17 @@
         </div>
         <div class="quiz-row2 quiz-platform">
           <div class="quiz-row2__column">
-            <input type="radio" name="Площадка:" id="platform1" value="Лыжный cтадион в ЗШК">
+            <input type="radio" name="Площадка:" id="platform1" value="Лесная площадка">
             <label for="platform1">
               <img src="img/quiz/1.png" alt="">
-              <span>Лыжный cтадион в ЗШК</span>
+              <span>Лесная площадка</span>
+            </label>
+          </div>
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform3" value="Бункер">
+            <label for="platform3">
+              <img src="img/quiz/3.png" alt="">
+              <span>Бункер</span>
             </label>
           </div>
           <!-- <div class="quiz-row2__column">
@@ -192,7 +202,7 @@
             <input id="data-time" type="radio">
             <label for="change_input2">
               <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
-                placeholder="Желаемые дата и время игры">
+                     placeholder="Желаемые дата и время игры">
             </label>
           </div>
         </div>
@@ -277,7 +287,7 @@
       <div class="quiz__info-content">
         <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
         <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
-            class="quiz__info-end"></span></div>
+                class="quiz__info-end"></span></div>
         <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
       </div>
       <div class="quiz__line">
